@@ -1,0 +1,7 @@
+# 第三方依赖
+# 只装了这些；渲染本身只需要 Pillow 和 numpy。
+Pillow>=10
+numpy>=1.26
+
+# 仅 timeline.py 需要（读音频取时长）
+soundfile>=0.12

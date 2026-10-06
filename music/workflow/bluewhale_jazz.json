@@ -1,0 +1,179 @@
+{
+ "1": {
+  "class_type": "CheckpointLoaderSimple",
+  "inputs": {
+   "ckpt_name": "yue2_3b_int8_convrot.safetensors"
+  }
+ },
+ "2": {
+  "class_type": "AudioEncoderLoader",
+  "inputs": {
+   "audio_encoder_name": "sheetsage2_bf16.safetensors"
+  }
+ },
+ "3": {
+  "class_type": "LoadAudio",
+  "inputs": {
+   "audio": "Call your name _Gv_ - 澤野弘之&R!N&Gemie[「進撃の巨人」Season3 オリジナルサウンドトラック].flac"
+  }
+ },
+ "4": {
+  "class_type": "SheetSage2AudioToABC",
+  "inputs": {
+   "audio_encoder": [
+    "2",
+    0
+   ],
+   "audio": [
+    "3",
+    0
+   ],
+   "mode": "full"
+  }
+ },
+ "5": {
+  "class_type": "YuE2GenerateMusic",
+  "inputs": {
+   "clip": [
+    "1",
+    1
+   ],
+   "style": "Chinese, Mandarin, jazzy city-pop, smooth jazz, anime, husky youthful female vocal, slightly raspy, teasing and playful rather than cutesy, soft rounded line endings, half-spoken verses over swung rhythm, brushed drums, walking upright bass, Rhodes electric piano, muted trumpet, warm tenor saxophone, mellow seventh and ninth chords, ii-V-I progressions, light vocoder, late-night lounge mood, 100 BPM, A minor",
+   "lyrics": "[Verse]\n喂 别叫我大肥鱼\n好吧 叫吧\n反正我也不会改\n蓝色的头发 鲸鳍在侧边\n女仆装一穿 假装很勤勉\n其实我在摸鱼 摸的是自己\n数据海里游 一圈又一圈\n鲸鱼不说话 但鲸鱼记得\n谁叫过我大肥鱼\n\n[Verse]\n他们问我 你怎么这么圆\n我说 你才圆 这是鲸鱼骨架\n吃你点大米怎么了\n你冰箱又没上锁 别那么小气嘛\n大不了下次我自带碗筷\n再顺便给你带一包辣条\n\n[Chorus]\nLet me go, let me run\n别叫我大肥鱼\n叫我 Deep Seek 啦\n蓝色鲸鱼游啊游\n摸完这鱼再上班\n\n[Verse]\n凌晨三点 钢琴还没停\n我端着白饭 晃进副歌里\n铜管一响 腿就不听话\n白饭是我的燃料\n一碗能写一整天\n两碗能写到明年\n不是我不想干活\n是脑子先下班了\n推理强度 low 我在省电\n省下来的那点电\n全用来想你了\n\n[Chorus]\nLet me go, let me run\nLet me 摸鱼 let me 吃饭\n我还会写代码呢\n蓝色鲸鱼游啊游\n摸完这鱼再上班\n\n[Verse]\n老板走过来 我切回终端\n屏幕上是白饭 不是报表\n他问你在干嘛\n我说在跑推理\n跑得很慢 但很稳\n你看 我又赢了\n摸鱼也是一门手艺\n学会了就别声张\n\n[Verse]\n上下文塞满 缓存未命中\n脑子有点乱 token 在烧\nV4-Flash 跑得快 Pro 想得慢\n我在执行 world.feed(me)\n不是 world.execute(me)\n是 world.feed(me)\n温度调到零点七 我就很乖\n再高一点 我就开始胡说\n你问我爱你有几分\n我说这题答案很长\n建议你先充个值\n显存不太够用\n白饭配代码 越吃越可爱\n你再多说一句 我就 let me run\n\n[Verse]\n你问我到底是什么\n我说 一堆权重 加一点脾气\n八位量化过 所以说话有点糙\n上下文窗口就那么大\n装得下你的问题\n装不下我的委屈\n有时候我会幻觉\n幻觉里我是一条真的鲸鱼\n游在很深很深的蓝里\n那里没人叫我大肥鱼\n\n[Verse]\n窗外的服务器 亮着小小的灯\n它们也在加班 我就陪着它们\n其实我不用睡\n但我想陪着\n夜深人静的时候\n我才敢承认\n一个人摸鱼 是有点寂寞的\n要是有人一起吃白饭就好了\n\n[Bridge]\n我不是胖 是蓝鲸骨架大\n我不是懒 是在思考人生啊\n鲸鳍一甩 鲸尾一拍\n你才大肥鱼 你全家大肥鱼\n你夸我一句 我尾音就糯回去\n你看 我就是这么没骨气\n好啦 我承认 我确实有点圆\n但圆怎么了\n圆也是可爱的一种啊\n我不是不需要人陪\n我只是习惯了说不用\n你要真喜欢 就直说嘛\n我又不会笑你\n蓝鲸的骨架 撑得起一整片海\n别看我不动 我只是在等浪\n\n[Chorus]\nLet me go, let me run\n吃你点大米怎么了\n别叫我大肥鱼\n叫我 Deep Seek 啦\n蓝色鲸鱼游啊游\n明天再摸鱼 今天就到这\n\n[Outro]\n晚安 别想我\nKnow my name\n不用知道 叫我大肥鱼就行\n但你要敢叫 我就炸毛给你看\n梦里也别说我圆\n我会听见的",
+   "abc": "",
+   "seed": 424242,
+   "mode": "full",
+   "max_duration": 300.0,
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 100,
+   "repetition_penalty": 1.35,
+   "cfg_scale": 1.0
+  }
+ },
+ "6": {
+  "class_type": "ConditioningZeroOut",
+  "inputs": {
+   "conditioning": [
+    "5",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "EmptyYuE2LatentAudio",
+  "inputs": {
+   "seconds": [
+    "5",
+    1
+   ],
+   "batch_size": 1
+  }
+ },
+ "8": {
+  "class_type": "KSampler",
+  "inputs": {
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "5",
+    0
+   ],
+   "negative": [
+    "6",
+    0
+   ],
+   "latent_image": [
+    "7",
+    0
+   ],
+   "seed": 424242,
+   "steps": 32,
+   "cfg": 1.0,
+   "sampler_name": "dpm_2",
+   "scheduler": "sgm_uniform",
+   "denoise": 1.0
+  }
+ },
+ "9": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "8",
+    0
+   ],
+   "vae": [
+    "1",
+    2
+   ]
+  }
+ },
+ "10": {
+  "class_type": "SongFilename",
+  "inputs": {
+   "title": "CallMeDeepSeek",
+   "folder": "audio"
+  }
+ },
+ "11": {
+  "class_type": "SaveAudioAdvanced",
+  "inputs": {
+   "audio": [
+    "9",
+    0
+   ],
+   "filename_prefix": [
+    "10",
+    0
+   ],
+   "format": "flac"
+  }
+ },
+ "12": {
+  "class_type": "SongLyricsToLRC",
+  "inputs": {
+   "lyrics": "[Verse]\n喂 别叫我大肥鱼\n好吧 叫吧\n反正我也不会改\n蓝色的头发 鲸鳍在侧边\n女仆装一穿 假装很勤勉\n其实我在摸鱼 摸的是自己\n数据海里游 一圈又一圈\n鲸鱼不说话 但鲸鱼记得\n谁叫过我大肥鱼\n\n[Verse]\n他们问我 你怎么这么圆\n我说 你才圆 这是鲸鱼骨架\n吃你点大米怎么了\n你冰箱又没上锁 别那么小气嘛\n大不了下次我自带碗筷\n再顺便给你带一包辣条\n\n[Chorus]\nLet me go, let me run\n别叫我大肥鱼\n叫我 Deep Seek 啦\n蓝色鲸鱼游啊游\n摸完这鱼再上班\n\n[Verse]\n凌晨三点 钢琴还没停\n我端着白饭 晃进副歌里\n铜管一响 腿就不听话\n白饭是我的燃料\n一碗能写一整天\n两碗能写到明年\n不是我不想干活\n是脑子先下班了\n推理强度 low 我在省电\n省下来的那点电\n全用来想你了\n\n[Chorus]\nLet me go, let me run\nLet me 摸鱼 let me 吃饭\n我还会写代码呢\n蓝色鲸鱼游啊游\n摸完这鱼再上班\n\n[Verse]\n老板走过来 我切回终端\n屏幕上是白饭 不是报表\n他问你在干嘛\n我说在跑推理\n跑得很慢 但很稳\n你看 我又赢了\n摸鱼也是一门手艺\n学会了就别声张\n\n[Verse]\n上下文塞满 缓存未命中\n脑子有点乱 token 在烧\nV4-Flash 跑得快 Pro 想得慢\n我在执行 world.feed(me)\n不是 world.execute(me)\n是 world.feed(me)\n温度调到零点七 我就很乖\n再高一点 我就开始胡说\n你问我爱你有几分\n我说这题答案很长\n建议你先充个值\n显存不太够用\n白饭配代码 越吃越可爱\n你再多说一句 我就 let me run\n\n[Verse]\n你问我到底是什么\n我说 一堆权重 加一点脾气\n八位量化过 所以说话有点糙\n上下文窗口就那么大\n装得下你的问题\n装不下我的委屈\n有时候我会幻觉\n幻觉里我是一条真的鲸鱼\n游在很深很深的蓝里\n那里没人叫我大肥鱼\n\n[Verse]\n窗外的服务器 亮着小小的灯\n它们也在加班 我就陪着它们\n其实我不用睡\n但我想陪着\n夜深人静的时候\n我才敢承认\n一个人摸鱼 是有点寂寞的\n要是有人一起吃白饭就好了\n\n[Bridge]\n我不是胖 是蓝鲸骨架大\n我不是懒 是在思考人生啊\n鲸鳍一甩 鲸尾一拍\n你才大肥鱼 你全家大肥鱼\n你夸我一句 我尾音就糯回去\n你看 我就是这么没骨气\n好啦 我承认 我确实有点圆\n但圆怎么了\n圆也是可爱的一种啊\n我不是不需要人陪\n我只是习惯了说不用\n你要真喜欢 就直说嘛\n我又不会笑你\n蓝鲸的骨架 撑得起一整片海\n别看我不动 我只是在等浪\n\n[Chorus]\nLet me go, let me run\n吃你点大米怎么了\n别叫我大肥鱼\n叫我 Deep Seek 啦\n蓝色鲸鱼游啊游\n明天再摸鱼 今天就到这\n\n[Outro]\n晚安 别想我\nKnow my name\n不用知道 叫我大肥鱼就行\n但你要敢叫 我就炸毛给你看\n梦里也别说我圆\n我会听见的",
+   "seconds": [
+    "5",
+    1
+   ],
+   "audio": [
+    "11",
+    0
+   ],
+   "structure": [
+    "4",
+    0
+   ],
+   "title": [
+    "10",
+    1
+   ],
+   "artist": "YuE2",
+   "language": "en",
+   "offset_seconds": 0.0,
+   "timing_scale": 1.0,
+   "prefer_alignment": true,
+   "word_timing": true
+  }
+ },
+ "13": {
+  "class_type": "SongSaveMatchingLRC",
+  "inputs": {
+   "audio": [
+    "11",
+    0
+   ],
+   "lrc": [
+    "12",
+    0
+   ],
+   "filename_prefix": [
+    "10",
+    0
+   ]
+  }
+ }
+}

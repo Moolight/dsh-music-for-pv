@@ -1,0 +1,9 @@
+# Normalise line endings in the repository, so a Windows checkout and a Linux
+# checkout produce the same bytes and diffs stay clean. Git already warned that
+# it would rewrite LF to CRLF on checkout without this.
+* text=auto eol=lf
+
+*.png binary
+*.webp binary
+*.ttf binary
+*.svg text

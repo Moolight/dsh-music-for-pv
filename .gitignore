@@ -1,0 +1,16 @@
+# Everything under out/ is regenerable, and most of it shows third-party art
+# (the character, the stickers) that this repository does not redistribute.
+out/*
+!out/timeline.json
+!out/shots.json
+!out/sticker_place.json
+!out/timeline_report.md
+
+# Your own copies of the song, the lyrics and the character art. Only the
+# explanation is tracked.
+input/*
+!input/README.md
+
+__pycache__/
+*.pyc
+.DS_Store
